@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title> Contoh Program Javascript </title>
+    </head>
+    <script lang="Javascript">
+        function test() {
+            var val1=document.kirim.T1.value
+            //Membuat variabel val1
+            if (val1%2 == 0)
+            //Fungsi untuk menentukan/menghitung ganjil genap dengan modulus
+            document.kirim.T2.value="bilangan genap"
+            //Output : "bilangan genap"
+            else
+            document.kirim.T2.value="bilangan ganjil"
+            //Output : "bilangan ganjil"
+        }
+    </script>
+    <body>
+        <! Menampilkan Form >
+        <form method="POST" name="kirim">
+            <p> Bil <input type="text" name="T1" size="20"> Merupakan bil <input type="text" name="T2" size="20"> </p>
+            <! Menampilkan input pada halaman web >
+            <p> <input type="button" value="Tebak" name="B1" onclick=test()> </p>
+            <! Menampilkan button pada halaman web >
+        </form>
+    </body>
+</html>

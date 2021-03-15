@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title> Konversi Nilai </title>
+    </head>
+    <script>
+        function test(){
+            //membuat variabel nilai
+            var nilai = document.kirim.X1.value
+            //jika bilangan kurang dari atau sama dengan 100 maka proses akan berlanjut
+            if (nilai<=100){
+                //untuk nilai lebih dari sama dengan 81 sampai 100
+                if(nilai>=81)
+                document.kirim.X2.value = "A"
+                //Output : "A"
+
+                //untuk nilai lebih dari sama dengan 71 sampai 80
+                else if(nilai>=71 && nilai <=80)
+                document.kirim.X2.value = "AB"
+                //Output : "AB"
+
+                //untuk nilai lebih dari sama dengan 66 sampai 70
+                else if(nilai>=66 && nilai <=70)
+                document.kirim.X2.value = "B"
+                //Output : "B"
+
+                //untuk nilai lebih dari sama dengan 61 sampai 65
+                else if(nilai>=61 && nilai <=65)
+                document.kirim.X2.value = "BC"
+                //Output : "BC"
+
+                //untuk nilai lebih dari sama dengan 56 sampai 60
+                else if(nilai>=56 && nilai <=60)
+                document.kirim.X2.value = "C"
+                //Output : "C"
+
+                //untuk nilai lebih dari sama dengan 41 sampai 55
+                else if(nilai>=41 && nilai <=55)
+                document.kirim.X2.value = "D"
+                //Output : "D"
+
+                //untuk nilai lebih dari sama dengan 0 sampai 40
+                else if(nilai>=0 && nilai <=40)
+                document.kirim.X2.value = "E"
+                //Output : "E"
+            }
+            //jika bilangan yang dimasukan tidak sesuai (lebih dari 100) maka akan muncul peringatan
+            else alert("Nilai yang Anda Masukan Salah!")
+            //Output : "Nilai yang Anda Masukan Salah!"
+        }
+    </script>
+    <body>
+        <! membuat form >
+        <form method="POST" name="kirim">
+            <p> Masukan Nilai Anda : <input type="text" name="X1" size="20"> </p>
+            <! menampilkan input teks untuk nilai >
+            <p> Hasil Konversi : <input type="text" name="X2" size="20"> </p>
+            <! menampilkan input teks untuk hasil konversi>
+            <p> <input type="button" name="button" value="Konversi" onclick=test()> </p>
+            <! menampilkan button konversi >
+        </form>
+    </body>
+</html>

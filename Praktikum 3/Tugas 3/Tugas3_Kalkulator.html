@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title> Kalkulator Sederhana </title>
+        <style type="text/css">
+            body{
+                margin-top: 40px;
+                background: white;
+                font-family: sans-serif;
+                text-align: center;
+            }
+            table{
+                background-color: plum;
+                border-collapse: collapse;
+                text-align: center;
+                width: 300px;
+                height: 150px;
+            }
+            tr, td{
+                border: transparent;
+            }
+            .btn{
+                width: 50px;
+                height: 30px;
+                font-size: 15px;
+                font-weight: bold;
+                background-color: white;
+            }
+        </style>
+    </head>
+    <script lang="Javascript">
+        function tambah(){
+            // fungsi untuk button tambah, menyimpan var bil 1 dan bil 2
+            var bil1 = parseFloat(document.cal.bil1.value);
+            var bil2 = parseFloat(document.cal.bil2.value);
+            var hasil = bil1 + bil2;
+            document.cal.hasil.value = hasil;
+            // Output : bil1 dan bil2 akan dijumlah, dan akan muncul hasil
+        }
+        function kurang(){
+            // fungsi untuk button kurang, menyimpan var bil 1 dan bil 2
+            var bil1 = parseFloat(document.cal.bil1.value);
+            var bil2 = parseFloat(document.cal.bil2.value);
+            var hasil = bil1 - bil2;
+            document.cal.hasil.value = hasil;
+            // Output : bil1 dan bil2 akan dikurang, dan akan muncul hasil
+        }
+        function kali(){
+            // fungsi untuk button kali, menyimpan var bil 1 dan bil 2
+            var bil1 = parseFloat(document.cal.bil1.value);
+            var bil2 = parseFloat(document.cal.bil2.value);
+            var hasil = bil1 * bil2;
+            document.cal.hasil.value = hasil;
+            // Output : bil1 dan bil2 akan dikali, dan akan muncul hasil
+        }
+        function bagi(){
+            // fungsi untuk button bagi, menyimpan var bil 1 dan bil 2
+            var bil1 = parseFloat(document.cal.bil1.value);
+            var bil2 = parseFloat(document.cal.bil2.value);
+            var hasil = bil1 / bil2;
+            document.cal.hasil.value = hasil;
+            // Output : bil1 dan bil2 akan dibagi, dan akan muncul hasil
+        }
+    </script>
+    <body>
+        <form name="cal">
+            <h3> Kalkulator Sederhana </h3>
+            <table border="1" align="center">
+                <tr>
+                    <td> Bilangan 1 : </td>
+                    <td> <input type="number" name="bil1" size="20"> </td>
+                </tr>
+                <tr>
+                    <td> Bilangan 2 : </td>
+                    <td> <input type="number" name="bil2" size="20"> </td>
+                </tr>
+                <tr>
+                    <td> Hasil : </td>
+                    <td> <input type="number" name="hasil" size="20" readonly="true"> </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"> 
+                        <input class="btn" type="button" value=" + " onclick="tambah()"> 
+                        <input class="btn" type="button" value=" - " onclick="kurang()">
+                        <input class="btn" type="button" value=" x " onclick="kali()">
+                        <input class="btn" type="button" value=" : " onclick="bagi()">
+                        <input class="btn" type="reset" value=" C ">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
